@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Payments API v1" tests="4" time="1.598">
+  <testsuite name="payments / {paymentId} / refund / Refund a payment" id="06e41330-a2fa-410d-af46-634e14a4d8bf" timestamp="2025-08-07T09:29:09.640Z" tests="5" failures="1" errors="0" time="0.839">
+    <testcase name="Response status code is 200" time="0.839" classname="PaymentsPaymentIdRefundRefundAPayment"/>
+    <testcase name="Response time is less than 200ms" time="0.839" classname="PaymentsPaymentIdRefundRefundAPayment">
+      <failure type="AssertionFailure" message="expected 839 to be below 200">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: ecfc2271-4663-44d6-816a-81e06caa1116.]]>
+        <![CDATA[Collection name: Payments API v1.]]>
+        <![CDATA[Request name: payments / {paymentId} / refund / Refund a payment.]]>
+        <![CDATA[Test description: Response time is less than 200ms.]]>
+        <![CDATA[Error message: expected 839 to be below 200.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 839 to be below 200
+   at Object.eval sandbox-script.js:2:1).]]>
+      </failure>
+    </testcase>
+    <testcase name="Response matches the expected schema" time="0.839" classname="PaymentsPaymentIdRefundRefundAPayment"/>
+    <testcase name="Amount is a non-negative number" time="0.839" classname="PaymentsPaymentIdRefundRefundAPayment"/>
+    <testcase name="Created_at is in a valid date-time format" time="0.839" classname="PaymentsPaymentIdRefundRefundAPayment"/>
+  </testsuite>
+  <testsuite name="payments / {paymentId} / Retrieve a payment by ID" id="59f2e1d0-a2cd-4074-b05f-17a346f49212" timestamp="2025-08-07T09:29:09.640Z" tests="5" failures="2" errors="0" time="0.228">
+    <testcase name="Response status code is 200" time="0.228" classname="PaymentsPaymentIdRetrieveAPaymentById"/>
+    <testcase name="Response time is less than 200ms" time="0.228" classname="PaymentsPaymentIdRetrieveAPaymentById">
+      <failure type="AssertionFailure" message="expected 228 to be below 200">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: ecfc2271-4663-44d6-816a-81e06caa1116.]]>
+        <![CDATA[Collection name: Payments API v1.]]>
+        <![CDATA[Request name: payments / {paymentId} / Retrieve a payment by ID.]]>
+        <![CDATA[Test description: Response time is less than 200ms.]]>
+        <![CDATA[Error message: expected 228 to be below 200.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 228 to be below 200
+   at Object.eval sandbox-script.js:2:2).]]>
+      </failure>
+    </testcase>
+    <testcase name="Response contains required fields" time="0.228" classname="PaymentsPaymentIdRetrieveAPaymentById"/>
+    <testcase name="Amount is a non-negative number" time="0.228" classname="PaymentsPaymentIdRetrieveAPaymentById"/>
+    <testcase name="Currency should be a valid ISO 4217 currency code" time="0.228" classname="PaymentsPaymentIdRetrieveAPaymentById">
+      <failure type="AssertionFailure" message="Currency must be a valid ISO 4217 code: expected 'string' to match /^[A-Z]{3}$/">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: ecfc2271-4663-44d6-816a-81e06caa1116.]]>
+        <![CDATA[Collection name: Payments API v1.]]>
+        <![CDATA[Request name: payments / {paymentId} / Retrieve a payment by ID.]]>
+        <![CDATA[Test description: Currency should be a valid ISO 4217 currency code.]]>
+        <![CDATA[Error message: Currency must be a valid ISO 4217 code: expected 'string' to match /^[A-Z]{3}$/.]]>
+        <![CDATA[Stacktrace: AssertionError: Currency must be a valid ISO 4217 code: expected 'string' to match /^[A-Z]{3}$/
+   at Object.eval sandbox-script.js:5:2).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="payments / Create a new payment" id="0476ba33-02d4-4938-aa91-b4ab3d805db4" timestamp="2025-08-07T09:29:09.640Z" tests="5" failures="1" errors="0" time="0.292">
+    <testcase name="Response status code is 201" time="0.292" classname="PaymentsCreateANewPayment"/>
+    <testcase name="Response has required fields" time="0.292" classname="PaymentsCreateANewPayment"/>
+    <testcase name="Amount is a non-negative number" time="0.292" classname="PaymentsCreateANewPayment"/>
+    <testcase name="Currency is a non-empty string and follows the ISO 4217 format" time="0.292" classname="PaymentsCreateANewPayment">
+      <failure type="AssertionFailure" message="Currency should follow ISO 4217 format: expected 'string' to match /^[A-Z]{3}$/">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: ecfc2271-4663-44d6-816a-81e06caa1116.]]>
+        <![CDATA[Collection name: Payments API v1.]]>
+        <![CDATA[Request name: payments / Create a new payment.]]>
+        <![CDATA[Test description: Currency is a non-empty string and follows the ISO 4217 format.]]>
+        <![CDATA[Error message: Currency should follow ISO 4217 format: expected 'string' to match /^[A-Z]{3}$/.]]>
+        <![CDATA[Stacktrace: AssertionError: Currency should follow ISO 4217 format: expected 'string' to match /^[A-Z]{3}$/
+   at Object.eval sandbox-script.js:4:3).]]>
+      </failure>
+    </testcase>
+    <testcase name="Created_at is in a valid date-time format" time="0.292" classname="PaymentsCreateANewPayment"/>
+  </testsuite>
+  <testsuite name="payments / List all payments" id="c661dc63-51af-4270-9cae-ff513ae1ee13" timestamp="2025-08-07T09:29:09.640Z" tests="5" failures="2" errors="0" time="0.239">
+    <testcase name="Response status code is 200" time="0.239" classname="PaymentsListAllPayments"/>
+    <testcase name="Response time is less than 200ms" time="0.239" classname="PaymentsListAllPayments">
+      <failure type="AssertionFailure" message="expected 239 to be below 200">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: ecfc2271-4663-44d6-816a-81e06caa1116.]]>
+        <![CDATA[Collection name: Payments API v1.]]>
+        <![CDATA[Request name: payments / List all payments.]]>
+        <![CDATA[Test description: Response time is less than 200ms.]]>
+        <![CDATA[Error message: expected 239 to be below 200.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 239 to be below 200
+   at Object.eval sandbox-script.js:2:4).]]>
+      </failure>
+    </testcase>
+    <testcase name="Response is an array with at least one element" time="0.239" classname="PaymentsListAllPayments"/>
+    <testcase name="Validate the schema of each payment object" time="0.239" classname="PaymentsListAllPayments"/>
+    <testcase name="All currency codes are valid" time="0.239" classname="PaymentsListAllPayments">
+      <failure type="AssertionFailure" message="expected 'HRK' to be one of [ 'USD', 'EUR', 'GBP', 'JPY', …(7) ]">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: ecfc2271-4663-44d6-816a-81e06caa1116.]]>
+        <![CDATA[Collection name: Payments API v1.]]>
+        <![CDATA[Request name: payments / List all payments.]]>
+        <![CDATA[Test description: All currency codes are valid.]]>
+        <![CDATA[Error message: expected 'HRK' to be one of [ 'USD', 'EUR', 'GBP', 'JPY', …(7) ].]]>
+        <![CDATA[Stacktrace: AssertionError: expected 'HRK' to be one of [ 'USD', 'EUR', 'GBP', 'JPY', …(7) ]
+   at Object.eval sandbox-script.js:5:4).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+</testsuites>
